@@ -1,3 +1,11 @@
+html, body {
+  height: 100%;
+}
+.container, .row.justify-content-center.align-items-center {
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
   background: image-url("/background-img.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -9,8 +17,8 @@ body {
 .title-box{
   margin-top: 20%;
   .title{
-    color: white;
-    text-shadow: 2px 0px 2px #000000;
+    color: #eceeef;
+    // text-shadow: 2px 0px 2px;
   }
 }
 
@@ -19,5 +27,8 @@ body {
   .logo-box{
     margin: 0 auto;
     padding-bottom: 10px;
+  }
+  .campos{
+    margin-left : 3px;
   }
 }

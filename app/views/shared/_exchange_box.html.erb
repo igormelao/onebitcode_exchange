@@ -1,26 +1,23 @@
 <div class="exchange_box">
   <div class="card">
-    <div class="card-header text-center">Simule sua conversão</div>
+    <div class="card-header text-center">
+      <h5 id="result">Simule sua conversão!</h5>
+    </div>
     <div class="card-block">
-      <%= form_tag("/exchange", method: "post", id: "exchange_form") do %>
-        <div class="form-group">
-          <p class="title">Moeda Pretendida</p>
+      <%= form_tag("/exchange", method: "post",class: "form-inline", id: "exchange_form") do %>
+        <div class="campos">
+          <input type="number" id="quantity" class="form-control" name="quantity" placeholder="Valor a ser convertido" step="any" required>
+        </div>
+        <div class="campos">
           <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
         </div>
-        <div class="form-group">
-          <input type="number" id="quantity" class="form-control" name="quantity" placeholder="Quantidade" step="any" required>
+        <div class="campos">
+          <a href="#" id="change-values" class="form-control">
+                <i class="fa fa-exchange" aria-hidden="true"></i>
+              </a>
         </div>
-        <div class="destination_currency">
-          <div class="form-group">
-            <p class="title">Moeda Pretendida</p>
+        <div class="campos">
             <%= select_tag "currency_destination", options_for_select(currency_select,"EUR"),class: "form-control", id: "currency_destination" %>
-          </div>
-          <div class="form-group">
-            <input type="text" id="result" class="form-control" name="result" placeholder="Resultado" readonly>
-          </div>
-        </div>
-        <div>
-          <button class="btn btn-primary btn-exchange col-md12" type="submit">CONVERTER</button>
         </div>
       <% end %>
     </div>
