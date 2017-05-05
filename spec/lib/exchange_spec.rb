@@ -1,6 +1,6 @@
 require 'spec_helper'
 require './lib/exchange'
-require 'byebug'
+
 
 describe Currency do
   it "exchange" do

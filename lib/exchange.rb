@@ -1,6 +1,6 @@
 require 'rest-client'
 require 'json'
-require 'byebug'
+
 
 module Currency
   def self.exchange currency, currency_destination, quantity
