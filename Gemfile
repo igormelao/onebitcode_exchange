@@ -43,8 +43,6 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'rest-client'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  #gem 'byebug', platform: :mri
   gem 'capybara', '~> 2.14'
   gem 'rspec-rails', '~> 3.5'
 end
